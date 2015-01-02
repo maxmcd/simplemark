@@ -4,8 +4,8 @@ br
         - unless @post.title.blank?
             b=@post.title
             '&nbsp;- 
-        span.timestamp
-            = @post.created_at.strftime('%r %D')
+        span.timestamp title=@post.created_at
+            = time_ago_in_words(@post.created_at) + ' ago'
 .row
     .twelve.columns
         .content
