@@ -10,6 +10,40 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require normalize
+ *= require skeleton
+ *= require navbar
  *= require_self
  */
+
+ .row {
+    margin-bottom: 0rem; 
+ }
+
+ textarea {
+    height: 300px;
+    resize: none;
+    font-family: monospace;
+ }
+ .timestamp {
+    font-family: 'helvetica', sans-serif;
+    font-weight: lighter;
+    color: #999;
+    font-size: smaller;
+ }
+ .title h2 {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    display: inline-block;
+ }
+
+ .content {
+    padding: 30px;
+    word-wrap: break-word;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+ }
+
+.navbar {
+    background-color: #eee;
+}

@@ -1,0 +1,12 @@
+br
+.row
+    .twelve.columns.title
+        - unless @post.title.blank?
+            b=@post.title
+            '&nbsp;- 
+        span.timestamp
+            = @post.created_at.strftime('%r %D')
+.row
+    .twelve.columns
+        .content
+            = @html.html_safe

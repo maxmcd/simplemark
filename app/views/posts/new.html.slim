@@ -1,0 +1,15 @@
+br
+.row
+    .twelve.columns
+        'Pastebin for Markdown
+
+= form_for Post.new, url: '/create' do |f|
+    .row
+        .six.columns
+            = f.text_field :title, placeholder: 'title', class: 'u-full-width'
+    .row
+        .twelve.columns
+            = f.text_area :body, class: 'u-full-width', placeholder: @textarea_placeholder
+    .row
+        .twelve.columns
+            = f.submit 'submit', class: 'button-primary'
